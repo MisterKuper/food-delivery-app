@@ -8,7 +8,7 @@ const LoginPopup = ({setShowLogin}) => {
 
   const {url, setToken} = useContext(StoreContext);
 
-    const [currectState, setCurrentState] = useState("Login");
+    const [currentState, setCurrentState] = useState("Login");
     const [data, setData] = useState({
       name: '',
       email: '',
@@ -24,7 +24,7 @@ const LoginPopup = ({setShowLogin}) => {
     const onLogin = async (event) => {
       event.preventDefault();
       let newUrl = url;
-      if (currectState==='Login') {
+      if (currentState==='Login') {
         newUrl += '/api/user/login';
       }
       else {
@@ -49,20 +49,24 @@ const LoginPopup = ({setShowLogin}) => {
     <div className='login-popup'>
       <form onSubmit={onLogin} className='login-popup-container'>
         <div className='login-popup-title'>
-            <h2>{currectState}</h2>
+            <h2>{currentState}</h2>
             <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt='' />
         </div>
         <div className='login-popup-inputs'>
-            {currectState==='Login' ? <></> : <input name='name' onChange={onChangeHandler} value={data.name} type='text' placeholder='Your name' required/>}
+            {currentState==='Login' ? <></> : <input name='name' onChange={onChangeHandler} value={data.name} type='text' placeholder='Your name' required/>}
             <input name='email' onChange={onChangeHandler} value={data.email} type='email' placeholder='Your email' required/>
             <input name='password' onChange={onChangeHandler} value={data.password} type='password' placeholder='Password' required/>
         </div>
-        <button type='submit'>{currectState==='Sign Up' ? 'Create account' : 'Login'}</button>
-        <div className='login-popup-condition'>
-            <input type='checkbox' required/>
+        <button type='submit'>{currentState==='Sign Up' ? 'Create account' : 'Login'}</button>
+        {currentState === 'Login' 
+          ? <></>
+          : 
+          <div className='login-popup-condition'>
+            <input type='checkbox' required />
             <p>By continuing, I agree to the terms of use and privacy policy.</p>
-        </div>
-        {currectState==='Login'
+          </div>
+        }
+        {currentState==='Login'
         ? <p>Create a new account? <span onClick={()=>setCurrentState('Sign Up')}>Click here</span></p>
         : <p>Already have an account? <span onClick={()=>setCurrentState('Login')}>Login here</span></p>
         }
