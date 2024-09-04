@@ -85,7 +85,7 @@ export const assets = {
 
 export const menu_list = [
     {
-        menu_name: "Salads",
+        menu_name: "Salad",
         menu_image: menu_1
     },
     {
@@ -125,7 +125,7 @@ export const food_list = [
         image: food_1,
         price: 20,
         description: 'A fresh and light salad made with crunchy cucumbers, juicy tomatoes, sweet bell peppers, red onions, and Kalamata olives. Topped with cubes of feta cheese and drizzled with fragrant olive oil, with a sprinkle of oregano.',
-        category: 'Salads'
+        category: 'Salad'
     },
     {
         _id: '2',
@@ -133,7 +133,7 @@ export const food_list = [
         image: food_2,
         price: 20,
         description: 'A timeless favorite with crisp romaine lettuce, crunchy croutons, and shaved Parmesan cheese, all tossed in a creamy Caesar dressing made from anchovies, garlic, and lemon. Garnished with additional Parmesan and a hint of black pepper.',
-        category: 'Salads'
+        category: 'Salad'
     },
     {
         _id: '3',
@@ -141,7 +141,7 @@ export const food_list = [
         image: food_3,
         price: 25,
         description: 'A simple yet elegant salad of ripe tomatoes, fresh mozzarella cheese, and basil leaves. Drizzled with extra-virgin olive oil and balsamic reduction, and seasoned with sea salt and freshly ground black pepper.',
-        category: 'Salads'
+        category: 'Salad'
     },
     {
         _id: '4',
@@ -149,7 +149,7 @@ export const food_list = [
         image: food_4,
         price: 28,
         description: 'A hearty and satisfying salad composed of chopped romaine lettuce, crispy bacon, hard-boiled eggs, grilled chicken, avocado, cherry tomatoes, and crumbled blue cheese. Served with a choice of dressing, offering a rich mix of textures and flavors.',
-        category: 'Salads'
+        category: 'Salad'
     },
     {
         _id: '5',
